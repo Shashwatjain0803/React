@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import VideosList from './VideosList';
+import VideoPlayer from './VideoPlayer';
 const API_KEY = "AIzaSyCaX0M-YyhQDHx8TYoWHhJ7TJcK2_e6iY8";
 function App() {
   const [videosList, setVideosList] = useState(
@@ -33,7 +34,9 @@ function App() {
   return (
     <div>
       <h1>I am in App</h1>
+      <VideoPlayer></VideoPlayer>
       <VideosList videos={videosList.videos}></VideosList>
+      
     </div>
   );
 }
